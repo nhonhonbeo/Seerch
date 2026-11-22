@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seerch – Debug Me</title>
+<meta name="description" content="Seerch – game giải đố debug: bạn có tìm được thứ mình cần tìm không?">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9B%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body><div id="br">
+<div id="tabs"><div id="tab">Seerch</div><button id="cb" onclick="openChat()"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10C7.4 11.4 11.4 7.4 12 2z" fill="#4285f4"/></svg><span>Ask Gemini</span><i id="bd">1</i></button></div>
+<div id="bar"><span>←  →  ⟳</span><div id="url">localhost:3000</div></div>
+<div id="app"></div>
+<div id="chat"><div class="hd">Gemini ✨<span onclick="chat.style.display='none'" style="cursor:pointer">✕</span></div><div id="ms"></div>
+<form onsubmit="return say(this)"><input name="t" placeholder="undefined"><button>↑</button></form></div>
+<div id="modal"></div></div>
+
+<!-- Logic game: script thường, chạy ngay sau khi HTML được dựng -->
+<script src="/game.js"></script>
+<!-- Lớp kết nối cloud (Firebase) – được thêm dần ở các giai đoạn sau -->
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
